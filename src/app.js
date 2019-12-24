@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast')
 const chalk = require('chalk')
 
  const app = express()
+ const port = process.env.PORT || 3000
  // define path for express config
  const viewspath = path.join(__dirname, '../viewspath/views')
  const partialpath = path.join(__dirname, '../viewspath/partials')
@@ -89,6 +90,6 @@ app.get('*', (req,res) =>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log('server is up with port 3000')
+app.listen(port, ()=>{
+    console.log('server is up with port' + port)
 })
