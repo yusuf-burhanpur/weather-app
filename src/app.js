@@ -30,16 +30,12 @@ app.get('/about', (req, res)=>{
         name:'yusuf mustafa'
     })
 })
-
 app.get('/help', (req, res)=>{
     res.render('help', {
         title: 'contact us',
        name: 'yusuf mustafa'
-        
-    
     })
 })
-
 app.get('/help/*', (req, res) =>{
     res.render('404-page',{
         title:'404 error',
